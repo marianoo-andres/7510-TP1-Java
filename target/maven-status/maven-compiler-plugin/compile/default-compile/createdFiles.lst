@@ -1,2 +1,4 @@
-ar/uba/fi/tdd/rulogic/model/KnowledgeBase.class
-ar/uba/fi/tdd/rulogic/App.class
+ar\uba\fi\tdd\rulogic\model\InvalidQueryException.class
+ar\uba\fi\tdd\rulogic\model\InvalidLineException.class
+ar\uba\fi\tdd\rulogic\model\KnowledgeBase.class
+ar\uba\fi\tdd\rulogic\App.class

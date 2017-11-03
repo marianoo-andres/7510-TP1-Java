@@ -1,0 +1,4 @@
+varon(juan).
+varon(pepe).
+hijo(X, Y) :- varon(X), padre(Y, X).
+

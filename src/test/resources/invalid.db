@@ -1,0 +1,19 @@
+varon(juan).
+varon()
+varonhector).
+varon(roberto.
+varon(alejandro).
+
+mujer(cecilia).
+padrejuan, pepe).
+padre(juan,.
+padre(hector, maria).
+padre(roberto, alejandro).
+padre(roberto, cecilia).
+hijo(X, Y)varon(X), padre(Y, X).
+hija(X, Y) :-, padre(Y, X).
+hermano(nicolas, roberto).
+hermano(roberto, nicolas).
+varon.
+tio(X, Y, Z):-,.
+tia(X, Y, Z):-.

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="0" name="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" time="0.024" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseCreatorTest" time="0" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_151\jre\bin"/>
@@ -67,9 +67,6 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testValidFactQueriesNumbersDB" time="0"/>
-  <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testInvalidQueries" time="0"/>
-  <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testValidRuleQueriesNumbersDB" time="0.013"/>
-  <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testValidFactQueriesBigDB" time="0.011"/>
-  <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testValidRuleQueriesBigDB" time="0"/>
+  <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseCreatorTest" name="testValidDatabaseCreation" time="0"/>
+  <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseCreatorTest" name="testInvalidDatabaseCreation" time="0"/>
 </testsuite>
