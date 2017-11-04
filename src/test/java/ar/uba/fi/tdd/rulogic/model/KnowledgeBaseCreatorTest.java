@@ -9,7 +9,7 @@ public class KnowledgeBaseCreatorTest {
 
 
     @Test
-    public void testValidDatabaseCreation() throws InvalidLineException {
+    public void testValidDatabaseCreation() throws InvalidDatabaseLineException {
         KnowledgeBaseCreator knowledgeBaseCreator = new KnowledgeBaseCreator();
         String pathToDB =  new File("").getAbsolutePath().concat(File.separator + "src" + File.separator + "test"
                 + File.separator + "resources" + File.separator + "small.db");
@@ -39,7 +39,7 @@ public class KnowledgeBaseCreatorTest {
         try {
             knowledgeBaseCreator.create(pathToDB);
             Assert.assertTrue(false);
-        } catch (InvalidLineException e) {
+        } catch (InvalidDatabaseLineException e) {
             Assert.assertTrue(e.getMessage().equals("The following rows are invalid: 1,2,3,5,7,8,12,13,16,17,18"));
         }
     }

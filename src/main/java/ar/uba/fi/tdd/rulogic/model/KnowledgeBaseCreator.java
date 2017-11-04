@@ -14,7 +14,7 @@ public class KnowledgeBaseCreator {
      * @param databaseFilePath path to rules.db
      * Reads file, validates it and returns database.
      */
-    public KnowledgeBase create(String databaseFilePath) throws InvalidLineException {
+    public KnowledgeBase create(String databaseFilePath) throws InvalidDatabaseLineException {
         String databaseString = getDatabaseString(databaseFilePath);
         List<String> databaseStringList =  Arrays.asList(databaseString.split("\n"));
         validateDatabaseStringList(databaseStringList);
@@ -85,7 +85,7 @@ public class KnowledgeBaseCreator {
         If any element on database string list is invalid throws exception
         with message of invalid rows
      ***/
-    private void validateDatabaseStringList(List<String> databaseStringList) throws InvalidLineException {
+    private void validateDatabaseStringList(List<String> databaseStringList) throws InvalidDatabaseLineException {
         List<Integer> invalidLineRows = new ArrayList<Integer>();
         int rowCount = 0;
         for (String line : databaseStringList) {
@@ -101,7 +101,7 @@ public class KnowledgeBaseCreator {
                 message = message.concat(String.valueOf(invalidLineRows.get(i)) + ",");
             }
             message = message.concat(String.valueOf(invalidLineRows.get(invalidLineRows.size()-1)));
-            throw new InvalidLineException(message);
+            throw new InvalidDatabaseLineException(message);
 
         }
     }

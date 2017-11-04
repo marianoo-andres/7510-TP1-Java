@@ -1,4 +1,7 @@
+ar\uba\fi\tdd\rulogic\model\InvalidDatabaseLineException.class
 ar\uba\fi\tdd\rulogic\model\InvalidQueryException.class
-ar\uba\fi\tdd\rulogic\model\InvalidLineException.class
+ar\uba\fi\tdd\rulogic\model\Fact.class
 ar\uba\fi\tdd\rulogic\model\KnowledgeBase.class
+ar\uba\fi\tdd\rulogic\model\Rule.class
 ar\uba\fi\tdd\rulogic\App.class
+ar\uba\fi\tdd\rulogic\model\KnowledgeBaseCreator.class

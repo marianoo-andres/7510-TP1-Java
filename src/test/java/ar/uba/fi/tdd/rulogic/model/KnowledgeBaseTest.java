@@ -8,7 +8,7 @@ import java.io.File;
 public class KnowledgeBaseTest {
 
     @Test
-    public void testInvalidQueries() throws InvalidLineException {
+    public void testInvalidQueries() throws InvalidDatabaseLineException {
         KnowledgeBaseCreator knowledgeBaseCreator = new KnowledgeBaseCreator();
         String pathToDB = new File("").getAbsolutePath().concat(File.separator + "src" + File.separator + "test"
                 + File.separator + "resources" + File.separator + "big.db");
@@ -53,7 +53,7 @@ public class KnowledgeBaseTest {
     }
 
     @Test
-    public void testValidFactQueriesBigDB() throws InvalidLineException, InvalidQueryException {
+    public void testValidFactQueriesBigDB() throws InvalidDatabaseLineException, InvalidQueryException {
         KnowledgeBaseCreator knowledgeBaseCreator = new KnowledgeBaseCreator();
         String pathToDB = new File("").getAbsolutePath().concat(File.separator + "src" + File.separator + "test"
                 + File.separator + "resources" + File.separator + "big.db");
@@ -85,7 +85,7 @@ public class KnowledgeBaseTest {
     }
 
     @Test
-    public void testValidRuleQueriesBigDB() throws InvalidLineException, InvalidQueryException {
+    public void testValidRuleQueriesBigDB() throws InvalidDatabaseLineException, InvalidQueryException {
         KnowledgeBaseCreator knowledgeBaseCreator = new KnowledgeBaseCreator();
         String pathToDB = new File("").getAbsolutePath().concat(File.separator + "src" + File.separator + "test"
                 + File.separator + "resources" + File.separator + "big.db");
@@ -104,7 +104,7 @@ public class KnowledgeBaseTest {
     }
 
     @Test
-    public void testValidFactQueriesNumbersDB() throws InvalidLineException, InvalidQueryException {
+    public void testValidFactQueriesNumbersDB() throws InvalidDatabaseLineException, InvalidQueryException {
         KnowledgeBaseCreator knowledgeBaseCreator = new KnowledgeBaseCreator();
         String pathToDB = new File("").getAbsolutePath().concat(File.separator + "src" + File.separator + "test"
                 + File.separator + "resources" + File.separator + "numbers.db");
@@ -117,7 +117,7 @@ public class KnowledgeBaseTest {
     }
 
     @Test
-    public void testValidRuleQueriesNumbersDB() throws InvalidLineException, InvalidQueryException {
+    public void testValidRuleQueriesNumbersDB() throws InvalidDatabaseLineException, InvalidQueryException {
         KnowledgeBaseCreator knowledgeBaseCreator = new KnowledgeBaseCreator();
         String pathToDB = new File("").getAbsolutePath().concat(File.separator + "src" + File.separator + "test"
                 + File.separator + "resources" + File.separator + "numbers.db");
