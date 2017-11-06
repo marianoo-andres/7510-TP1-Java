@@ -1,12 +1,12 @@
 package ar.uba.fi.tdd.rulogic.model;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Rule {
     private String name;
     private List<Fact> facts;
+    // Quantity of parameters
     private int parameterCount;
 
     /***

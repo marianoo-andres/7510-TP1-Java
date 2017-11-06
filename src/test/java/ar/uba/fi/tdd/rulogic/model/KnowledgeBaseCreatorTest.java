@@ -13,7 +13,7 @@ public class KnowledgeBaseCreatorTest {
         KnowledgeBaseCreator knowledgeBaseCreator = new KnowledgeBaseCreator();
         String pathToDB =  new File("").getAbsolutePath().concat(File.separator + "src" + File.separator + "test"
                 + File.separator + "resources" + File.separator + "small.db");
-        KnowledgeBase knowledgeBase = knowledgeBaseCreator.create(pathToDB);
+        KnowledgeBase knowledgeBase = (KnowledgeBase) knowledgeBaseCreator.create(pathToDB);
         List<Fact> facts = knowledgeBase.getFacts();
         List<Rule> rules = knowledgeBase.getRules();
 

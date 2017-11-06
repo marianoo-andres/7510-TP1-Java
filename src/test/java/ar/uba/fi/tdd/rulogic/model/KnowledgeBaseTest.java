@@ -12,7 +12,7 @@ public class KnowledgeBaseTest {
         KnowledgeBaseCreator knowledgeBaseCreator = new KnowledgeBaseCreator();
         String pathToDB = new File("").getAbsolutePath().concat(File.separator + "src" + File.separator + "test"
                 + File.separator + "resources" + File.separator + "big.db");
-        KnowledgeBase knowledgeBase = knowledgeBaseCreator.create(pathToDB);
+        KnowledgeBase knowledgeBase = (KnowledgeBase) knowledgeBaseCreator.create(pathToDB);
 
         try {
             knowledgeBase.answer("varonjavier).");
@@ -57,7 +57,7 @@ public class KnowledgeBaseTest {
         KnowledgeBaseCreator knowledgeBaseCreator = new KnowledgeBaseCreator();
         String pathToDB = new File("").getAbsolutePath().concat(File.separator + "src" + File.separator + "test"
                 + File.separator + "resources" + File.separator + "big.db");
-        KnowledgeBase knowledgeBase = knowledgeBaseCreator.create(pathToDB);
+        KnowledgeBase knowledgeBase = (KnowledgeBase) knowledgeBaseCreator.create(pathToDB);
 
         Assert.assertTrue(knowledgeBase.answer("varon(juan)."));
         Assert.assertTrue(knowledgeBase.answer("varon(pepe)."));
@@ -89,7 +89,7 @@ public class KnowledgeBaseTest {
         KnowledgeBaseCreator knowledgeBaseCreator = new KnowledgeBaseCreator();
         String pathToDB = new File("").getAbsolutePath().concat(File.separator + "src" + File.separator + "test"
                 + File.separator + "resources" + File.separator + "big.db");
-        KnowledgeBase knowledgeBase = knowledgeBaseCreator.create(pathToDB);
+        KnowledgeBase knowledgeBase = (KnowledgeBase) knowledgeBaseCreator.create(pathToDB);
 
         Assert.assertTrue(knowledgeBase.answer("hijo(pepe,juan)."));
         Assert.assertTrue(knowledgeBase.answer("hijo(alejandro,roberto)."));
@@ -108,7 +108,7 @@ public class KnowledgeBaseTest {
         KnowledgeBaseCreator knowledgeBaseCreator = new KnowledgeBaseCreator();
         String pathToDB = new File("").getAbsolutePath().concat(File.separator + "src" + File.separator + "test"
                 + File.separator + "resources" + File.separator + "numbers.db");
-        KnowledgeBase knowledgeBase = knowledgeBaseCreator.create(pathToDB);
+        KnowledgeBase knowledgeBase = (KnowledgeBase) knowledgeBaseCreator.create(pathToDB);
 
         Assert.assertTrue(knowledgeBase.answer("add(zero,zero,zero)."));
         Assert.assertTrue(knowledgeBase.answer("add(zero,one,one)."));
@@ -121,7 +121,7 @@ public class KnowledgeBaseTest {
         KnowledgeBaseCreator knowledgeBaseCreator = new KnowledgeBaseCreator();
         String pathToDB = new File("").getAbsolutePath().concat(File.separator + "src" + File.separator + "test"
                 + File.separator + "resources" + File.separator + "numbers.db");
-        KnowledgeBase knowledgeBase = knowledgeBaseCreator.create(pathToDB);
+        KnowledgeBase knowledgeBase = (KnowledgeBase) knowledgeBaseCreator.create(pathToDB);
 
         Assert.assertFalse(knowledgeBase.answer("subtract(one,one,two)."));
         Assert.assertTrue(knowledgeBase.answer("subtract(two,one,one)."));

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class KnowledgeBase {
+public class KnowledgeBase implements IKnowledgeBase {
 	private List<Fact> facts;
 	private List<Rule> rules;
 
@@ -29,7 +29,7 @@ public class KnowledgeBase {
 	    return rules;
     }
 
-    public boolean answer(String queryString) throws InvalidQueryException {
+    public Boolean answer(String queryString) throws InvalidQueryException {
         queryString = queryString.replace(" ","").replace("\t","").replace("\n","").replace(".","");
         validateQueryString(queryString);
         String [] splitted = queryString.replace(")","").split("\\(");
@@ -40,6 +40,7 @@ public class KnowledgeBase {
         return queryRule(name, values);
 
     }
+
 
     private Boolean queryFact(Fact fact) {
         for (Fact factStored : this.facts) {
@@ -57,6 +58,7 @@ public class KnowledgeBase {
         }
         return false;
     }
+
 
     private Boolean queryRule(String name, List<String> values) {
 	    for (Rule rule : this.rules) {

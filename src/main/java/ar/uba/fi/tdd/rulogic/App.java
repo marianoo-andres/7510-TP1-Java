@@ -1,9 +1,6 @@
 package ar.uba.fi.tdd.rulogic;
 
-import ar.uba.fi.tdd.rulogic.model.InvalidDatabaseLineException;
-import ar.uba.fi.tdd.rulogic.model.InvalidQueryException;
-import ar.uba.fi.tdd.rulogic.model.KnowledgeBase;
-import ar.uba.fi.tdd.rulogic.model.KnowledgeBaseCreator;
+import ar.uba.fi.tdd.rulogic.model.*;
 
 import java.io.File;
 import java.util.Scanner;
@@ -18,10 +15,11 @@ public class App
 	    App app = new App();
 
         KnowledgeBaseCreator knowledgeBaseCreator = new KnowledgeBaseCreator();
-        KnowledgeBase knowledgeBase = null;
+        IKnowledgeBase knowledgeBase = null;
         try {
             knowledgeBase = knowledgeBaseCreator.create(app.getDBPathFile());
-        } catch (InvalidDatabaseLineException e) {
+        }
+        catch (InvalidDatabaseLineException e) {
             System.out.println("Check your databasee file!");
             System.out.println(e.getMessage());
             System.exit(1);
@@ -32,12 +30,20 @@ public class App
 
     }
 
+    /**
+     *
+     * @return absolute path to database file
+     */
     private String getDBPathFile() {
 	    return new File("").getAbsolutePath().concat(File.separator + "src" + File.separator + "main"
                 + File.separator + "resources" + File.separator + "rules.db");
     }
 
-    private void answerQueries(KnowledgeBase knowledgeBase) {
+    /***
+     *
+     * Main loop
+     */
+    private void answerQueries(IKnowledgeBase knowledgeBase) {
 	    String EXIT_WORD = "exit";
         System.out.println("I shall answer all your questions!");
         System.out.println("Type exit to terminate");

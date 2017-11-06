@@ -4,4 +4,5 @@ ar\uba\fi\tdd\rulogic\model\Fact.class
 ar\uba\fi\tdd\rulogic\model\KnowledgeBase.class
 ar\uba\fi\tdd\rulogic\model\Rule.class
 ar\uba\fi\tdd\rulogic\App.class
+ar\uba\fi\tdd\rulogic\model\IKnowledgeBase.class
 ar\uba\fi\tdd\rulogic\model\KnowledgeBaseCreator.class

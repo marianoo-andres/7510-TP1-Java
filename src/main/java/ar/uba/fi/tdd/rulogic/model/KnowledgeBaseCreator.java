@@ -14,7 +14,7 @@ public class KnowledgeBaseCreator {
      * @param databaseFilePath path to rules.db
      * Reads file, validates it and returns database.
      */
-    public KnowledgeBase create(String databaseFilePath) throws InvalidDatabaseLineException {
+    public IKnowledgeBase create(String databaseFilePath) throws InvalidDatabaseLineException {
         String databaseString = getDatabaseString(databaseFilePath);
         List<String> databaseStringList =  Arrays.asList(databaseString.split("\n"));
         validateDatabaseStringList(databaseStringList);
